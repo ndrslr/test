@@ -225,19 +225,13 @@ section.block {
   padding-top: 2px;
 }
 
-/* The degree + school information */
-.timeline-item > div:last-child {
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  column-gap: 12px;
-  align-items: start;
+.timeline-school {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-/* Logo sits beside both lines of text */
 .school-logo {
-  grid-column: 1;
-  grid-row: 1 / span 2;
-
   width: 48px;
   height: 48px;
   object-fit: contain;
@@ -245,15 +239,11 @@ section.block {
   flex-shrink: 0;
 }
 
-/* Put the degree and school text in the second column */
 .timeline-role {
-  grid-column: 2;
   font-weight: 600;
-  display: block;
 }
 
 .timeline-place {
-  grid-column: 2;
   color: var(--ink-soft);
   font-size: 15px;
 }
