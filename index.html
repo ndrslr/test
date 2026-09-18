@@ -12,6 +12,42 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="pencilFilter" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <symbol id="fig-feynman" viewBox="0 0 100 140">
+      <path d="M18,122 L50,78"/>
+      <path d="M50,78 L84,18"/>
+      <path d="M50,78 Q42,88 34,79 Q26,70 18,79 Q10,88 2,79"/>
+      <polygon points="31,98 39,100 34,107" transform="rotate(-54 34 101)"/>
+      <polygon points="63,53 71,55 66,62" transform="rotate(-60 67 55)"/>
+    </symbol>
+
+    <symbol id="fig-string" viewBox="0 0 100 140">
+      <ellipse cx="50" cy="14" rx="24" ry="6"/>
+      <path d="M26,14 C6,40 6,70 26,90 C10,104 10,118 20,132"/>
+      <path d="M74,14 C94,40 94,70 74,90 C90,104 90,118 80,132"/>
+      <path d="M26,90 C38,78 62,78 74,90"/>
+      <ellipse cx="20" cy="132" rx="14" ry="5"/>
+      <ellipse cx="80" cy="132" rx="14" ry="5"/>
+    </symbol>
+
+    <symbol id="fig-bordism" viewBox="0 0 100 140">
+      <ellipse cx="26" cy="16" rx="15" ry="5"/>
+      <ellipse cx="74" cy="16" rx="15" ry="5"/>
+      <path d="M11,16 C4,42 10,64 26,78 C40,90 60,90 74,78 C90,64 96,42 89,16"/>
+      <path d="M26,78 C34,86 66,86 74,78"/>
+      <ellipse cx="50" cy="126" rx="20" ry="6"/>
+      <path d="M30,90 C30,104 36,118 50,126"/>
+      <path d="M70,90 C70,104 64,118 50,126"/>
+    </symbol>
+  </defs>
+</svg>
+
 <header class="hero">
   <div class="hero-equation" aria-hidden="true">
     S<sub>P</sub> = &minus;(T/2) &int; d&sup2;&sigma; &radic;&minus;h&nbsp; h<sup>ab</sup>&part;<sub>a</sub>X&middot;&part;<sub>b</sub>X
@@ -20,19 +56,19 @@
     <div class="hero-top">
       <div class="hero-text">
         <h1>Nathan Dressler</h1>
-        <p class="tagline">PhD Student in Theoretical Physics - String Theory<br>
+        <p class="tagline">PhD Student in Theoretical Physics &mdash; String Theory<br>
         Department of Physics and Astronomy, University of Pennsylvania</p>
       </div>
       <div class="portrait">
         <span>ND</span>
-        <img src="IMG_3095.jpg" alt="Portrait of Nathan Dressler" onerror="this.remove()">
+        <img src="photo.jpg" alt="Portrait of Nathan Dressler" onerror="this.remove()">
       </div>
     </div>
 
     <div class="hero-links">
-      <a href="mailto:ndr@sas.upenn.edu">ndr@sas.upenn.edu</a>
+      <a href="mailto:[your.email]@sas.upenn.edu">[your.email]@sas.upenn.edu</a>
       <a href="cv.pdf">CV</a>
-      <a href="https://github.com/ndrslr">GitHub</a>
+      <a href="https://github.com/[yourusername]">GitHub</a>
       <a href="https://scholar.google.com/citations?user=[your-id]">Google Scholar</a>
       <a href="https://arxiv.org/a/[yourlastname]_[f]_1">arXiv</a>
       <a href="https://www.jjheckman.com">Advisor: J. Heckman</a>
@@ -57,8 +93,8 @@
         Department of Physics and Astronomy at the University of
         Pennsylvania, working under the supervision of Prof. Jonathan J.
         Heckman on bordisms/TQFTs and generalized symmetries in string
-        theory. My path into theoretical physics started with a concussion 
-        that changed my perspective on mathematics the the world around us.</span></p>
+        theory. [Add a sentence on what drew you to the field, if you'd
+        like one here.]</span></p>
         <p><span class="editme">Before Penn, I completed dual B.S. degrees
         in Physics and Mathematics at Virginia Tech (2026), where I worked
         on heterotic string compactifications on CICY threefolds with
@@ -67,58 +103,54 @@
         matter experiment with Bruce Vogelaar.</span></p>
       </div>
 
-<div class="timeline">
-  <div class="timeline-item">
-    <div class="timeline-year">Aug 2026&ndash; Present</div>
-
-    <div class="timeline-school">
-      <img class="school-logo" src="penn-logo.png" alt="" onerror="this.remove()">
-
-      <div class="timeline-info">
-        <div class="timeline-role">
-          Ph.D., Physics and Astronomy
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">Aug 2026&ndash; Present</div>
+          <div class="timeline-school">
+            <img class="school-logo" src="penn-logo.png" alt="" onerror="this.remove()">
+            <div class="timeline-info">
+              <div class="timeline-role">
+                Ph.D., Physics and Astronomy
+              </div>
+              <div class="timeline-place">
+                University of Pennsylvania &mdash; advised by Jonathan J. Heckman
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="timeline-place">
-          University of Pennsylvania &mdash; advised by Jonathan J. Heckman
+        <div class="timeline-item">
+          <div class="timeline-year">May 2026</div>
+          <div class="timeline-school">
+            <img class="school-logo" src="vt-logo.png" alt="" onerror="this.remove()">
+            <div class="timeline-info">
+              <div class="timeline-role">
+                B.S., Physics
+              </div>
+              <div class="timeline-place">
+                Virginia Tech &mdash; GPA 4.0/4.0
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-year">May 2026</div>
-
-    <div class="timeline-school">
-      <img class="school-logo" src="vt-logo.png" alt="" onerror="this.remove()">
-
-      <div class="timeline-info">
-        <div class="timeline-role">
-          B.S., Physics
-        </div>
-        <div class="timeline-place">
-          Virginia Tech &mdash; GPA 4.0/4.0
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-year">May 2026</div>
-
-    <div class="timeline-school">
-      <img class="school-logo" src="vt-logo.png" alt="" onerror="this.remove()">
-
-      <div class="timeline-info">
-        <div class="timeline-role">
-          B.S., Mathematics
-        </div>
-        <div class="timeline-place">
-          Virginia Tech &mdash; GPA 4.0/4.0
+        <div class="timeline-item">
+          <div class="timeline-year">May 2026</div>
+          <div class="timeline-school">
+            <img class="school-logo" src="vt-logo.png" alt="" onerror="this.remove()">
+            <div class="timeline-info">
+              <div class="timeline-role">
+                B.S., Mathematics
+              </div>
+              <div class="timeline-place">
+                Virginia Tech &mdash; GPA 4.0/4.0
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
+      <div class="margin-art side-left" aria-hidden="true">
+        <svg viewBox="0 0 100 140" filter="url(#pencilFilter)"><use href="#fig-feynman"/></svg>
+      </div>
     </div>
   </div>
 </section>
@@ -130,9 +162,9 @@
       <h2>Research interests</h2>
       <div class="section-body">
         <p>Broadly, I'm interested in the non-perturbative structure of
-        string theory and quantum gravity, and in the discrete data such as
-        symmetries, topological charges, and defect groups that low-energy 
-        effective field theory alone doesn't see. I'm currently
+        string theory and quantum gravity, and in the discrete data &mdash;
+        symmetries, topological charges, defect groups &mdash; that
+        low-energy effective field theory alone doesn't see. I'm currently
         working on two threads in Prof. Heckman's group.</p>
       </div>
 
@@ -145,12 +177,14 @@
             Cobordism Conjecture: global symmetries associated with duality
             bundles should be broken by new, singular objects, and bordism
             groups predict what those objects must be. Specifically, I'm
-            computing Pin&#177; and Spin bordism groups twisted by duality 
-            bundles (extending the reflection-brane analysis of 'Pintopia' 
-            beyond its orignal dimension/duality group) to identify the new 
-            branes needed to cancel candiddate discrete glonal symmetries of 
-            M-Theory and Type IIB string theory.</p>
+            computing Pin&#177; and Spin bordism groups twisted by duality
+            bundles &mdash; extending the reflection-brane analysis of
+            &ldquo;Pintopia&rdquo; beyond its original dimension/duality
+            group &mdash; to identify the new branes needed to cancel
+            candidate discrete global symmetries of M-theory and type IIB
+            string theory.</p>
           </div>
+          <div class="topic-eq">&Omega;<sub>k</sub>(BG<sub>U</sub>)</div>
         </div>
         <div class="topic">
           <div>
@@ -165,6 +199,7 @@
             explore whether the SymTFT construction extends to give stable
             non-supersymmetric 4d SCFTs.</p>
           </div>
+          <div class="topic-eq">SymTFT</div>
         </div>
       </div>
 
@@ -188,6 +223,10 @@
           <div class="paper-links"><a href="https://arxiv.org/abs/2306.07311">arXiv:2306.07311</a></div>
         </div>
       </div>
+
+      <div class="margin-art side-right" aria-hidden="true">
+        <svg viewBox="0 0 100 140" filter="url(#pencilFilter)"><use href="#fig-string"/></svg>
+      </div>
     </div>
   </div>
 </section>
@@ -197,7 +236,7 @@
     <div class="marker">&sect;3</div>
     <div>
       <h2>Papers &amp; talks</h2>
-<!--
+
       <div class="papers">
         <div class="paper">
           <div class="paper-title"><span class="editme">[Working title &mdash; bordisms/TQFTs project]</span></div>
@@ -214,7 +253,7 @@
           </div>
         </div>
       </div>
--->
+
       <div class="section-body" style="margin-top: 32px;">
         <p style="color: var(--ink-faint); font-size: 14px;">Earlier work &mdash; Virginia Tech</p>
       </div>
@@ -240,6 +279,10 @@
           <div class="paper-meta">N. Dressler &mdash; poster, Virginia Tech Undergraduate Research Poster Session, April 2024</div>
         </div>
       </div>
+
+      <div class="margin-art side-left" aria-hidden="true">
+        <svg viewBox="0 0 100 140" filter="url(#pencilFilter)"><use href="#fig-bordism"/></svg>
+      </div>
     </div>
   </div>
 </section>
@@ -256,7 +299,7 @@
 
       <div class="cv-actions">
         <a class="btn" href="cv.pdf">Download CV (PDF)</a>
-        <a class="btn ghost" href="https://github.com/ndrlsr">View GitHub</a>
+        <a class="btn ghost" href="https://github.com/[yourusername]">View GitHub</a>
       </div>
 
       <div class="cv-highlights">
@@ -285,6 +328,10 @@
             <li>VT Undergraduate Research Poster Session (2024)</li>
           </ul>
         </div>
+      </div>
+
+      <div class="margin-art side-right" aria-hidden="true">
+        <svg viewBox="0 0 100 140" filter="url(#pencilFilter)"><use href="#fig-feynman"/></svg>
       </div>
     </div>
   </div>

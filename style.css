@@ -89,8 +89,8 @@ a:focus-visible, button:focus-visible {
 .hero-text { flex: 1; min-width: 220px; }
 
 .portrait {
-  width: 158px;
-  height: 158px;
+  width: 108px;
+  height: 108px;
   border-radius: 50%;
   background: var(--paper-raised);
   border: 1px solid var(--rule);
@@ -202,12 +202,7 @@ section.block {
 
 /* Background / timeline */
 
-.timeline {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
+.timeline { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
 
 .timeline-item {
   display: grid;
@@ -225,11 +220,15 @@ section.block {
   padding-top: 2px;
 }
 
+.timeline-role { font-weight: 600; }
+
 .timeline-school {
   display: flex;
   align-items: center;
   gap: 14px;
 }
+
+.timeline-info { min-width: 0; }
 
 .school-logo {
   width: 48px;
@@ -238,20 +237,7 @@ section.block {
   border-radius: 3px;
   flex-shrink: 0;
 }
-
-.timeline-info {
-  min-width: 0;
-}
-
-.timeline-role {
-  font-weight: 600;
-}
-
-.timeline-place {
-  color: var(--ink-soft);
-  font-size: 15px;
-}
-
+.timeline-place { color: var(--ink-soft); font-size: 15px; }
 
 /* Research interests */
 
@@ -337,6 +323,37 @@ section.block {
 
 .cv-col ul { margin: 0; padding-left: 18px; color: var(--ink-soft); font-size: 14.5px; }
 .cv-col li { margin-bottom: 6px; }
+
+/* Margin art — pencil-sketch diagrams down the sides */
+
+.section-grid { position: relative; }
+
+.margin-art { display: none; }
+
+@media (min-width: 1300px) {
+  .margin-art {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 92px;
+    opacity: 0.4;
+  }
+  .margin-art.side-left { right: calc(100% + 40px); }
+  .margin-art.side-right { left: calc(100% + 40px); }
+}
+
+.margin-art svg { width: 100%; height: auto; display: block; overflow: visible; }
+
+.margin-art path,
+.margin-art ellipse,
+.margin-art polygon {
+  stroke: var(--ink-soft);
+  stroke-width: 1.6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 /* Footer */
 
