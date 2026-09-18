@@ -257,11 +257,21 @@ section.block {
 .topic h3 { font-size: 18px; margin-bottom: 4px; }
 .topic p { margin: 0; color: var(--ink-soft); font-size: 15px; max-width: 52ch; }
 .topic-eq {
-  font-family: "IBM Plex Mono", monospace;
-  color: var(--teal-dim);
-  font-size: 14px;
-  text-align: right;
-  white-space: nowrap;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--paper-raised);
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.topic-eq img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Papers */
@@ -324,35 +334,55 @@ section.block {
 .cv-col ul { margin: 0; padding-left: 18px; color: var(--ink-soft); font-size: 14.5px; }
 .cv-col li { margin-bottom: 6px; }
 
-/* Margin art — pencil-sketch diagrams down the sides */
+/* Page layout — two image rails flanking the main column */
 
-.section-grid { position: relative; }
-
-.margin-art { display: none; }
-
-@media (min-width: 1300px) {
-  .margin-art {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 92px;
-    opacity: 0.4;
-  }
-  .margin-art.side-left { right: calc(100% + 40px); }
-  .margin-art.side-right { left: calc(100% + 40px); }
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
 }
 
-.margin-art svg { width: 100%; height: auto; display: block; overflow: visible; }
+@media (min-width: 1240px) {
+  .page-grid {
+    grid-template-columns: 168px minmax(0, 760px) 168px;
+    gap: 32px;
+    align-items: stretch;
+  }
+}
 
-.margin-art path,
-.margin-art ellipse,
-.margin-art polygon {
-  stroke: var(--ink-soft);
-  stroke-width: 1.6;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+main { min-width: 0; }
+
+.rail { display: none; }
+
+@media (min-width: 1240px) {
+  .rail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 60px 0;
+  }
+}
+
+.rail-img {
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--paper-raised);
+  box-shadow: 0 1px 3px rgba(28, 32, 41, 0.08);
+}
+
+.rail-left .rail-img:nth-child(odd) { transform: rotate(-1.5deg); }
+.rail-left .rail-img:nth-child(even) { transform: rotate(1deg); }
+.rail-right .rail-img:nth-child(odd) { transform: rotate(1.5deg); }
+.rail-right .rail-img:nth-child(even) { transform: rotate(-1deg); }
+
+.rail-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Footer */
@@ -380,5 +410,5 @@ footer {
   .timeline-item { grid-template-columns: 1fr; }
   .cv-highlights { grid-template-columns: 1fr; }
   .topic { grid-template-columns: 1fr; }
-  .topic-eq { text-align: left; }
+  .topic-eq { align-self: flex-start; }
 }

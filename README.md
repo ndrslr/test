@@ -16,17 +16,37 @@ once you're done.
 Add your actual CV as `cv.pdf` in this same folder — the "Download CV"
 button already points to `cv.pdf`.
 
-**Photo & logos (optional):** the page already has spots wired up for:
+**Photos & logos (optional):** the page has spots wired up for:
+
 - `photo.jpg` — your portrait, shown in a circle in the header. Until you
   add one, it falls back to showing your initials, so nothing looks broken.
-- `upenn-logo.png` — small icon next to your PhD entry in the timeline.
-- `vt-logo.png` — small icon next to your two Virginia Tech degrees.
+- `penn-logo.png` and `vt-logo.png` — small icons next to your degrees in
+  the timeline.
+- `left-01.jpg` through `left-08.jpg`, and `right-01.jpg` through
+  `right-08.jpg` — 16 images running down the left and right margins,
+  outside the text column, slightly rotated like photos pinned to a
+  corkboard. They spread evenly down the full length of the page, so
+  they won't line up with specific sections — think of it as a running
+  visual border rather than section-by-section illustration.
+- `topic-bordism.jpg` and `topic-symmetry.jpg` — two small square images
+  next to the "Bordisms, TQFTs & the Swampland" and "Generalized
+  symmetries in SCFTs" entries under Research Interests (these replaced
+  the small equation snippets).
+
+Portrait images work best roughly square. The margin images work best in
+a 4:5 (portrait) ratio, since they're cropped to that shape automatically
+— but any image will do, it'll just get center-cropped to fit.
 
 Just drop image files with those exact names into the same folder as
-`index.html` (square images work best for the logos, e.g. 40x40px) and
-they'll appear automatically — no code changes needed. If a file is
-missing, that spot just quietly disappears rather than showing a broken
-image icon.
+`index.html` and they'll appear automatically — no code changes needed.
+If a file is missing, that spot just quietly disappears rather than
+showing a broken image icon.
+
+**A note on the margin images:** they're hidden below roughly 1240px of
+browser width, since there isn't room for three columns below that — so
+on laptops with a narrower window, or on phones/tablets, only the center
+column shows. This is intentional (nothing looks broken), but it does
+mean most visitors on mobile won't see them.
 
 ## 2. Get it online with GitHub Pages (free)
 
