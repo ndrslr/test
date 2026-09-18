@@ -202,7 +202,12 @@ section.block {
 
 /* Background / timeline */
 
-.timeline { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
+.timeline {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
 .timeline-item {
   display: grid;
@@ -220,16 +225,38 @@ section.block {
   padding-top: 2px;
 }
 
-.timeline-role { font-weight: 600; display: flex; align-items: center; gap: 8px; }
+/* The degree + school information */
+.timeline-item > div:last-child {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  column-gap: 12px;
+  align-items: start;
+}
 
+/* Logo sits beside both lines of text */
 .school-logo {
-  width: 20px;
-  height: 20px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   border-radius: 3px;
   flex-shrink: 0;
 }
-.timeline-place { color: var(--ink-soft); font-size: 15px; }
+
+/* Put the degree and school text in the second column */
+.timeline-role {
+  grid-column: 2;
+  font-weight: 600;
+  display: block;
+}
+
+.timeline-place {
+  grid-column: 2;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
 
 /* Research interests */
 
