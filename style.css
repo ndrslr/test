@@ -227,8 +227,8 @@ section.block {
 
 .timeline-school {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
 }
 
 .school-logo {
@@ -239,6 +239,10 @@ section.block {
   flex-shrink: 0;
 }
 
+.timeline-info {
+  min-width: 0;
+}
+
 .timeline-role {
   font-weight: 600;
 }
@@ -247,6 +251,7 @@ section.block {
   color: var(--ink-soft);
   font-size: 15px;
 }
+
 
 /* Research interests */
 
