@@ -22,20 +22,25 @@ button already points to `cv.pdf`.
   add one, it falls back to showing your initials, so nothing looks broken.
 - `penn-logo.png` and `vt-logo.png` — small icons next to your degrees in
   the timeline.
-- `left-01.jpg` through `left-08.jpg`, and `right-01.jpg` through
-  `right-08.jpg` — 16 images running down the left and right margins,
-  outside the text column, slightly rotated like photos pinned to a
-  corkboard. They spread evenly down the full length of the page, so
-  they won't line up with specific sections — think of it as a running
-  visual border rather than section-by-section illustration.
+- `left-01.jpg` through `left-08.jpg` — 8 photos running down the left
+  margin, outside the text column, slightly rotated like photos pinned to
+  a corkboard.
+- `right-01.svg` through `right-08.svg` — 8 diagrams running down the
+  right margin: cylinder, pair-of-pants, one-handle, two-handle bordisms,
+  then tree-level, one-loop, two-loop, and open-string worldsheet
+  diagrams. These are already included — compiled straight from your
+  TikZ code, recolored to the site's ink-gray, transparent background,
+  no border, so they read as part of the page rather than as inserted
+  images. If you'd rather have photos here too, just replace them with
+  `.jpg` files of the same name (update the `src` in `index.html` from
+  `.svg` to `.jpg` for that slot).
 - `topic-bordism.jpg` and `topic-symmetry.jpg` — two small square images
   next to the "Bordisms, TQFTs & the Swampland" and "Generalized
-  symmetries in SCFTs" entries under Research Interests (these replaced
-  the small equation snippets).
+  symmetries in SCFTs" entries under Research Interests.
 
-Portrait images work best roughly square. The margin images work best in
-a 4:5 (portrait) ratio, since they're cropped to that shape automatically
-— but any image will do, it'll just get center-cropped to fit.
+Portrait and left-rail images work best roughly 4:5 (portrait aspect),
+since they're cropped to that shape automatically. The right-rail SVGs
+size themselves automatically — no cropping needed.
 
 Just drop image files with those exact names into the same folder as
 `index.html` and they'll appear automatically — no code changes needed.
